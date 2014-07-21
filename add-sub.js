@@ -3,8 +3,10 @@ $(document).ready(function() {
         $('.result').removeClass('error').hide();
     });
     $('input:button').click(function() {
-        var num1 = +$('#num1').val();
-        var num2 = +$('#num2').val();
+        var s_num1 = $('#num1').val();
+        var num1 = s_num1 && +s_num1;
+        var s_num2 = $('#num2').val();
+        var num2 = s_num2 && +s_num2;
         var result = "";
         var operator = "plus";
         if (validInt(num1) && validInt(num2)) {
@@ -25,5 +27,5 @@ $(document).ready(function() {
 
 
 function validInt(num) {
-   return (num && (typeof num === 'number') && (num % 1 === 0) || num === 0);
+    return (num && (typeof num === 'number') && (num % 1 === 0) || num === 0);
 }
