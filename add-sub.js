@@ -26,6 +26,5 @@ $(document).ready(function() {
 
 
 function validInt(num) {
-    var result = (num && (typeof num === 'number') && (num % 1 === 0));
-    return result;
+   return (num && (typeof num === 'number') && (num % 1 === 0));
 }
